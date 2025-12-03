@@ -1,26 +1,29 @@
-# dockprom
+# Mattermost Dockprom
 
-A monitoring solution for Docker hosts and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor),
-[NodeExporter](https://github.com/prometheus/node_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
+A docker compose solution to read the metrics export from the [Mattermost Metrics Plugin](https://github.com/mattermost/mattermost-plugin-metrics).
 
 ## Install
 
-Clone this repository on your Docker host, cd into dockprom directory and run compose up:
+Clone this repository and `cd` into it:
 
 ```bash
 git clone https://github.com/hanzei/dockprom
 cd dockprom
 
-docker-compose up -d
 ```
 
+Extract your metrics dump into `prometheus_data`:
+```bash
+mkdir prometheus_data
+tar -xf /path/to/the/metrics/dump.tar -C prometheus_data
+```
 
-Prerequisites:
+Start the docker container:
+```bash
+docker compose up -d
+```
 
-* Docker Engine >= 1.13
-* Docker Compose >= 1.11
-
-## Setup Grafana
+## Access Grafana
 
 Navigate to `http://localhost:3000` and login with user ***admin*** password ***admin***. You can change the credentials in the compose file or by supplying the `ADMIN_USER` and `ADMIN_PASSWORD` environment variables on compose up.
 
