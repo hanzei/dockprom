@@ -2,3 +2,6 @@
 .vs/
 .vscode/
 .idea/
+
+
+prometheus_data/
