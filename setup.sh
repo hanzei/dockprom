@@ -15,8 +15,8 @@ if [ ! -f "$TAR_FILE" ]; then
     exit 1
 fi
 
-git clone https://github.com/hanzei/dockprom
-cd dockprom
+git clone https://github.com/hanzei/mattermost-metrics-viewer
+cd mattermost-metrics-viewer
 
 mkdir -p prometheus_data
 tar -xf "$TAR_FILE" -C prometheus_data

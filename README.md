@@ -1,4 +1,4 @@
-# Mattermost Dockprom
+# Mattermost Metrics Viewer
 
 A docker compose solution to read the metrics export from the [Mattermost Metrics Plugin](https://github.com/mattermost/mattermost-plugin-metrics).
 
@@ -7,7 +7,7 @@ A docker compose solution to read the metrics export from the [Mattermost Metric
 Run the setup script with the path to your metrics dump:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/hanzei/dockprom/master/setup.sh | bash -s /path/to/the/metrics/dump.tar
+curl -sSL https://raw.githubusercontent.com/hanzei/mattermost-metrics-viewer/master/setup.sh | bash -s /path/to/the/metrics/dump.tar
 ```
 
 ### Manual Installation
@@ -17,8 +17,8 @@ Alternatively, you can set up manually:
 1. Clone this repository and `cd` into it:
 
 ```bash
-git clone https://github.com/hanzei/dockprom
-cd dockprom
+git clone https://github.com/hanzei/mattermost-metrics-viewer
+cd mattermost-metrics-viewer
 ```
 
 2. Extract your metrics dump into `prometheus_data`:
