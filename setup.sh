@@ -8,10 +8,10 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-TAR_FILE="$1"
+TAR_FILE="$(realpath "$1")"
 
 if [ ! -f "$TAR_FILE" ]; then
-    echo "Error: File '$TAR_FILE' not found"
+    echo "Error: File '$1' not found"
     exit 1
 fi
 
