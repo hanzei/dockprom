@@ -4,21 +4,30 @@ A docker compose solution to read the metrics export from the [Mattermost Metric
 
 ## Install
 
-Clone this repository and `cd` into it:
+Run the setup script with the path to your metrics dump:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/hanzei/dockprom/master/setup.sh | bash -s /path/to/the/metrics/dump.tar
+```
+
+### Manual Installation
+
+Alternatively, you can set up manually:
+
+1. Clone this repository and `cd` into it:
 
 ```bash
 git clone https://github.com/hanzei/dockprom
 cd dockprom
-
 ```
 
-Extract your metrics dump into `prometheus_data`:
+2. Extract your metrics dump into `prometheus_data`:
 ```bash
 mkdir prometheus_data
 tar -xf /path/to/the/metrics/dump.tar -C prometheus_data
 ```
 
-Start the docker container:
+3. Start the docker container:
 ```bash
 docker compose up -d
 ```
