@@ -34,7 +34,7 @@ docker compose up -d
 
 ## Access Grafana
 
-Navigate to `http://localhost:3000` and login with user ***admin*** password ***admin***. You can change the credentials in the compose file or by supplying the `ADMIN_USER` and `ADMIN_PASSWORD` environment variables on compose up.
+Navigate to `http://localhost:3001` and login with user ***admin*** password ***admin***. You can change the credentials in the compose file or by supplying the `ADMIN_USER` and `ADMIN_PASSWORD` environment variables on compose up.
 
 Grafana is preconfigured with the Mattermost dashboard and Prometheus as the default data source:
 

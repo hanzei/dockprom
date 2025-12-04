@@ -23,4 +23,4 @@ tar -xf "$TAR_FILE" -C prometheus_data
 
 docker compose up
 
-echo "Setup complete! Access Grafana at http://localhost:3000 (admin/admin)"
+echo "Setup complete! Access Grafana at http://localhost:3001 (admin/admin)"
